@@ -3,113 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Chapter 10. DNS Diagnostics and Tools</title>
+  <title>Anthony Reyneveld • DDI Engineer</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Header with logo and top links -->
-  <header>
-    <div class="topbar">
-      <span class="logo">ZYTRAX Open</span>
-      <nav class="topnav">
-        <a href="mailto:info@zytrax.com">mail us</a> |
-        <a href="#">mail this page</a> |
-        <a href="#contact">contact us</a>
-      </nav>
-    </div>
-    <h1>Chapter 10. DNS Diagnostics and Tools</h1>
-    <p class="intro">
-      This chapter defines tools that may be provided with BIND releases, are generally available or just jolly useful! The tools described either provide specific services or may help in diagnosing problems.
-    </p>
+  <header class="site-header">
+    <h1>Anthony Reyneveld</h1>
+    <p class="subtitle">DDI Engineer &amp; Architect</p>
+    <nav class="contact-links">
+      <a href="tel:+15484687191">📞 +1 (548) 468‑7191</a>
+      <a href="mailto:areyneveld@gmail.com">✉️ areyneveld@gmail.com</a>
+      <a href="https://linkedin.com/in/areyneveld" target="_blank">🔗 LinkedIn</a>
+    </nav>
   </header>
 
-  <!-- Table of Contents -->
-  <nav class="toc">
-    <h2>Contents</h2>
-    <ol>
-      <li><a href="#sec10-1">10.1 Overview and Introduction</a></li>
-      <li><a href="#sec10-2">10.2 NSLOOKUP</a></li>
-      <li><a href="#sec10-3">10.3 DIG</a></li>
-      <li><a href="#sec10-4">10.4 dnssec-keygen</a></li>
-      <li><a href="#sec10-5">10.5 dnssec-signzone</a></li>
-      <li><a href="#sec10-6">10.6 rndc</a></li>
-    </ol>
-  </nav>
-
-  <!-- Section 10.1 -->
-  <section id="sec10-1">
-    <h2>10.1 Overview and Introduction</h2>
-    <p>
-      BIND provides a number of tools that are invaluable when testing or diagnosing problems. Of these
-      <code>named‑checkzone</code> (validates zone files for correctness) and <code>named‑checkconf</code>
-      (checks the named.conf file) are invaluable for finding those stupid problems that we can all introduce
-      when editing files.
-    </p>
-    <p>
-      They have the additional property that they may prolong life by removing the blind panic that ensues after
-      making a trivial edit and reloading BIND only to find that the live system is no longer functional due a
-      parameter error and which always seems to take longer to find when we know that hundred of queries are
-      being rejected because the name server is off-the-air.
-    </p>
-    <p>
-      <code>rndc</code> is the remote access tool that allows selective reload of zones and to which many DNS
-      administrators are addicted. It has serious security implications if not properly installed and configured.
-    </p>
-    <p>
-      <code>nsupdate</code> is a tool that allows dynamic updating (DDNS) of zone files. Extreme care must be
-      taken when configuring BIND to enable DDNS since you may inadvertently open up your DNS zone files to the
-      world—while this is an extremely friendly, neighborly thing to do it may not always be wise.
-    </p>
-    <p>
-      Finally, the Really Big Issue™ is whether to use <a href="#sec10-2">nslookup</a> or <a href="#sec10-3">dig</a>.
-      With the macho guys generally regarding nslookup users as wimps. There is no doubt that dig provides more
-      useful information than nslookup for those that understand the detailed information that is displayed,
-      however if you work with multiple platforms, especially Windows, you have no choice but to be familiar
-      with nslookup since this is the only tool provided with the standard release.
-    </p>
-    <p>
-      One of the happy side‑effects of installing BIND on Windows is that you get all its diagnostic tools including
-      dig.
-    </p>
+  <section class="about">
+    <h2>Professional Summary</h2>
+    <p>Analytical and results‑oriented DDI (DNS, DHCP, IPAM) Engineer with a proven track record designing, implementing, and automating complex network infrastructures using BlueCat, Infoblox, TCPWave, and BIND. Passionate about driving reliability, security, and efficiency through innovative solutions and cross‑team collaboration.</p>
   </section>
 
-  <!-- Section 10.2 Placeholder -->
-  <section id="sec10-2">
-    <h2>10.2 NSLOOKUP</h2>
-    <p>… full description, examples, and options for <code>nslookup</code> go here …</p>
+  <section class="skills">
+    <h2>DDI Specialty Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-card">
+        <h3>IPAM Automation</h3>
+        <p>Custom Python &amp; REST API integrations</p>
+      </div>
+      <div class="skill-card">
+        <h3>DNSSEC &amp; Security</h3>
+        <p>Key rollovers, signing, threat hardening</p>
+      </div>
+      <div class="skill-card">
+        <h3>Anycast &amp; Geo‑DNS</h3>
+        <p>Multi‑region routing for resilience</p>
+      </div>
+      <div class="skill-card">
+        <h3>Dynamic DNS (DDNS)</h3>
+        <p>nsupdate, BIND, and BlueCat implementations</p>
+      </div>
+      <div class="skill-card">
+        <h3>Self‑Service Portals</h3>
+        <p>Blueprints &amp; custom workflows (ServiceNow)</p>
+      </div>
+      <div class="skill-card">
+        <h3>Monitoring &amp; Alerting</h3>
+        <p>Capacity planning &amp; real‑time notifications</p>
+      </div>
+      <div class="skill-card">
+        <h3>Hybrid Cloud DDI</h3>
+        <p>AWS &amp; Azure DNS migrations</p>
+      </div>
+      <div class="skill-card">
+        <h3>High‑Availability</h3>
+        <p>Failover, clustering, and load‑balancing</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Section 10.3 Placeholder -->
-  <section id="sec10-3">
-    <h2>10.3 DIG</h2>
-    <p>… full description, examples, and options for <code>dig</code> go here …</p>
+  <section class="experience">
+    <h2>Selected Experience</h2>
+    <article>
+      <h3>DDI Engineer/Architect @ Citibank (Network‑to‑Code)</h3>
+      <time>07/2023 – Present</time>
+      <ul>
+        <li>Led evaluation &amp; migration from TCPWave to a new enterprise DDI platform.</li>
+        <li>Automated IPAM workflows with Python, saving 30% manual effort.</li>
+        <li>Designed and staged POCs, improved monitoring and documentation.</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Sr. DDI Engineer/Architect @ Haleon (Accenture MSP)</h3>
+      <time>02/2023 – 08/2023</time>
+      <ul>
+        <li>Consolidated public DNS zones under single registrar; coached MSP team.</li>
+        <li>Deployed Anycast across 23+ Infoblox members for geo‑redundancy.</li>
+        <li>Built virtual appliance designs, reverse‑zone migration, and DR docs.</li>
+      </ul>
+    </article>
+    <article>
+      <h3>Sr. DDI Engineer @ Nike (EMEA)</h3>
+      <time>03/2020 – 02/2023</time>
+      <ul>
+        <li>Migrated Converse DNS/DHCP into central data centers, reducing hardware 35%.</li>
+        <li>Automated record management via ServiceNow &amp; Kubernetes tools.</li>
+        <li>Orchestrated 20% on‑prem to cloud migration (AWS/Azure).</li>
+      </ul>
+    </article>
   </section>
 
-  <!-- Section 10.4 Placeholder -->
-  <section id="sec10-4">
-    <h2>10.4 dnssec-keygen</h2>
-    <p>… details on <code>dnssec-keygen</code> …</p>
-  </section>
-
-  <!-- Section 10.5 Placeholder -->
-  <section id="sec10-5">
-    <h2>10.5 dnssec-signzone</h2>
-    <p>… details on <code>dnssec-signzone</code> …</p>
-  </section>
-
-  <!-- Section 10.6 Placeholder -->
-  <section id="sec10-6">
-    <h2>10.6 rndc</h2>
-    <p>… details on <code>rndc</code> …</p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>
-      Problems, comments or corrections? Please <a href="mailto:info@zytrax.com">mail us</a>.  
-      This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons License</a>.
-    </p>
+  <footer class="site-footer">
+    <p>© 2025 Anthony Reyneveld</p>
+    <nav class="contact-links">
+      <a href="tel:+15484687191">📞</a>
+      <a href="mailto:areyneveld@gmail.com">✉️</a>
+      <a href="https://linkedin.com/in/areyneveld" target="_blank">🔗</a>
+    </nav>
   </footer>
 
 </body>
