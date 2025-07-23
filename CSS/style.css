@@ -1,0 +1,137 @@
+/* Import a code font */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+:root {
+  --bg: #121212;
+  --fg: #e0e0e0;
+  --accent: #0f0; /* neon green */
+  --card-bg: #1e1e1e;
+  --border: #333;
+}
+
+* {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Fira Code', monospace;
+  line-height: 1.4;
+  padding: 1rem;
+}
+
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  border-bottom: 2px solid var(--border);
+}
+.header-code code {
+  font-size: 1.5rem;
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--accent);
+}
+.header-code .tag { color: #ff66cc; }
+.header-code .attr { color: #66ccff; }
+.header-code .value { color: #ffd700; }
+.contact-links {
+  margin-top: 0.5rem;
+}
+.contact-links a {
+  margin: 0 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.contact-links a:hover { color: #fff; text-shadow: 0 0 4px var(--accent); }
+
+/* Sections common */
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,255,0,0.05);
+}
+section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  border-left: 4px solid var(--accent);
+  padding-left: 0.5rem;
+}
+section pre {
+  background: #111;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  color: #ccc;
+}
+
+/* Skills Grid */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+}
+.skill-card {
+  background: #181818;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.skill-card code {
+  font-size: 1rem;
+  color: var(--fg);
+}
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* Experience */
+.experience article {
+  margin-bottom: 1.5rem;
+}
+.experience h3 {
+  color: #66ccff;
+  font-size: 1.1rem;
+}
+.experience time {
+  display: block;
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+.experience ul {
+  list-style: none;
+}
+.experience li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.experience li::before {
+  content: '➤';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  text-shadow: 0 0 4px var(--accent);
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 2px solid var(--border);
+}
+.site-footer p {
+  margin-bottom: 0.5rem;
+  color: #888;
+}
